@@ -1,1 +1,36 @@
-django/
+# Django-specific files
+*.log               # Log files
+*.pot               # Portable Object Template files
+*.pyc               # Compiled Python files
+__pycache__/        # Directory for compiled bytecode
+db.sqlite3          # SQLite database file (if using SQLite)
+local_settings.py   # Local settings file (for sensitive info)
+
+# Virtual Environment
+.env                # Environment variable file
+venv/               # Virtual environment directory
+env/                # Alternative virtual environment directory
+
+# Media files (if you are uploading user-uploaded content)
+media/              # Directory for user-uploaded media files
+
+# Backup files
+*.bak               # Backup files
+
+# IDE-specific files
+.idea/              # PyCharm project configuration directory
+.vscode/            # Visual Studio Code settings directory
+
+# Operating System files
+.DS_Store           # macOS metadata file
+Thumbs.db           # Windows thumbnail cache file
+
+# Coverage reports and testing artifacts
+.coverage           # Coverage report file
+.tox/               # Tox testing environments directory
+.eggs/              # Egg packages directory
+
+# Other generated files
+*.egg-info/        # Egg metadata directory
+
+# Ignore any other temporary or sensitive files as needed.
