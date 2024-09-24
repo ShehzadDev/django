@@ -49,6 +49,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "api.middleware.CustomMiddleware",
 ]
 
 ROOT_URLCONF = "project.urls"
@@ -75,10 +76,16 @@ WSGI_APPLICATION = "project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# settings.py
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "django",  # Replace with your database name
+        "USER": "admin",  # Replace with your PostgreSQL username
+        "PASSWORD": "admin123",  # Replace with your PostgreSQL password
+        "HOST": "localhost",  # Use 'localhost' if running on the same machine
+        "PORT": "5432",  # Default port for PostgreSQL
     }
 }
 
