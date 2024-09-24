@@ -8,9 +8,9 @@ Home Page
 <h2>Authors List</h2>
 <ul>
     {% for author in authors %}
-        <li>{{ author.name }} - Born on {{ author.birth_date }}</li>
+    <li>{{ author.name }} - Born on {{ author.birth_date }} Age: {{ author.get_age }}</li>
     {% empty %}
-        <li>No authors found.</li>
+    <li>No authors found.</li>
     {% endfor %}
 </ul>
 {% endblock %}

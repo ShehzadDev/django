@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
+{% load custom_tag %}
 
 {% block title %}About{% endblock %}
 
 {% block pagecontent %}
 <h2>About</h2>
 <p>About us Page</p>
+
+{% for author in authors %}
+{% greet author.name %}
+{% endfor %}
+
+{% comment %} Optional note {% endcomment %}
 {% endblock %}

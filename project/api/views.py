@@ -1,15 +1,17 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Author
+from .AuthorProxy import AuthorProxy
 
 
 def home(request):
-    authors = Author.objects.all()
+    authors = AuthorProxy.objects.all()
     return render(request, "index.html", {"authors": authors})
 
 
 def about(request):
-    return render(request, "about.html")
+    authors = AuthorProxy.objects.all()
+    return render(request, "about.html", {"authors": authors})
 
 
 def index(request):

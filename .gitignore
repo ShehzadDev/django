@@ -33,4 +33,5 @@ Thumbs.db           # Windows thumbnail cache file
 # Other generated files
 *.egg-info/        # Egg metadata directory
 
+
 # Ignore any other temporary or sensitive files as needed.
