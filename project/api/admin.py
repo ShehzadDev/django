@@ -41,7 +41,11 @@ class AuthorAdmin(admin.ModelAdmin):
     actions = [change_author_name]
 
     def is_birthday_today(self, obj):
-        return obj.birth_date == timezone.now().date()
+        is_same_month_and_day = (
+            obj.birth_date.month == timezone.now().date().month
+            and obj.birth_date.day == timezone.now().date().day
+        )
+        return is_same_month_and_day
 
     is_birthday_today.short_description = "Birthday Today"
     is_birthday_today.boolean = True
